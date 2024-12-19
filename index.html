@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Reminder System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Reminder System</h1>
+    <section class="add-task">
+      <h2>Add New Task</h2>
+      <form id="add-task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required />
+        <input type="number" id="task-due-time" placeholder="Due Time (minutes)" required />
+        <input type="number" id="task-priority" placeholder="Priority (1-5)" min="1" max="5" required />
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+    <section class="task-list">
+      <h2>Tasks</h2>
+      <div id="tasks-output">
+      </div>
+    </section>
+    <section class="task-list">
+  <h2>Tasks</h2>
+  <button id="sort-priority-button">Sort by Priority</button>
+  <div id="tasks-output">
+  </div>
+    </section>
+    <section class="filter-tasks">
+    <h2>Filter Tasks by Due Time</h2>
+    <input type="number" id="timeframe" placeholder="Timeframe (minutes)" required />
+    <button id="filter-tasks-button">Display Tasks Due Soon</button>
+    <div id="filtered-tasks-output"></div>
+    </section>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
